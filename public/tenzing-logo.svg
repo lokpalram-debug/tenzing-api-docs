@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="72" viewBox="0 0 360 72">
+  <defs>
+    <linearGradient id="peakGrad" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#1B8A73"/>
+      <stop offset="1" stop-color="#3FD9B0"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(4,8)">
+    <path d="M0 52 L15 22 L24 36 L34 12 L52 52 Z" fill="url(#peakGrad)"/>
+    <path d="M34 12 L40 22 L28 22 Z" fill="#F2F7F5"/>
+  </g>
+  <text x="68" y="46" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="30" font-weight="700" fill="#0A3F35" letter-spacing="0.5">TENZING</text>
+  <text x="68" y="63" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="500" fill="#4B5A56" letter-spacing="2.5">TECHNOLOGIES</text>
+</svg>

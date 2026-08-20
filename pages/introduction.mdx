@@ -1,0 +1,47 @@
+---
+title: Introduction
+---
+
+# Tenzing API
+
+The **Tenzing API** is Tenzing Technologies' payroll and HR platform API. It exposes employer, employee, payroll, pension, absence, and reporting resources used to integrate with Tenzing's core system.
+
+## Base URL & versioning
+
+Every path is prefixed with a version segment, e.g. `/v1/employers/{employerId}/...`. Replace `{version}` with the API version you have been provisioned on (currently `v1`).
+
+## Authentication
+
+This API uses **Bearer token (JWT)** authentication. Include the token on every request:
+
+```
+Authorization: Bearer <your-jwt-token>
+```
+
+Requests made without a valid token, or with an expired token, receive a `401 Unauthorized` response.
+
+## Response envelope
+
+Most endpoints return a consistent JSON envelope rather than a bare payload:
+
+```json
+{
+  "isSuccess": true,
+  "statusCode": 200,
+  "message": null,
+  "result": {}
+}
+```
+
+| Field | Type | Description |
+|---|---|---|
+| `isSuccess` | boolean | Whether the request completed successfully. |
+| `statusCode` | integer | HTTP status code mirrored in the body. |
+| `message` | string \| null | Human-readable detail, typically populated on failure. |
+| `result` | object | The actual payload — a single object, or a list for collection endpoints. |
+
+Always check `isSuccess` (and HTTP status) before reading `result`.
+
+## Explore the API
+
+Head to the [API Reference](/api) to browse all 810 endpoints, grouped by resource (employees, contracts, payroll engine, pension, absence, HMRC, and more), each with parameters, request/response schemas, and a try-it console.
